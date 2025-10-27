@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h2>Employee Management Portal</h2>
+    <button id="logoutBtn" class="logout-btn">Sign Out</button>
+  </nav>
+
+  <section class="main">
+    <h1>Admin Dashboard</h1>
+
+    <div class="stats">
+      <div class="stat-card">
+        <p>Total Employees</p>
+        <h2 id="totalEmployees">0</h2>
+      </div>
+      <div class="stat-card">
+        <p>Departments</p>
+        <h2 id="totalDepartments">0</h2>
+      </div>
+      <div class="stat-card">
+        <p>Your Role</p>
+        <h2>Admin</h2>
+      </div>
+    </div>
+
+    <div class="directory">
+      <div class="directory-header">
+        <h3>Employee Directory</h3>
+        <button id="addEmployeeBtn" class="add-btn">+ Add Employee</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th><th>Email</th><th>Department</th><th>Position</th>
+            <th>Salary</th><th>Hire Date</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="employeeTable"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <div id="employeeModal" class="modal">
+    <div class="modal-content">
+      <h2>Add Employee</h2>
+      <input id="empName" type="text" placeholder="Name" />
+      <input id="empEmail" type="email" placeholder="Email" />
+      <input id="empDept" type="text" placeholder="Department" />
+      <input id="empPosition" type="text" placeholder="Position" />
+      <input id="empSalary" type="number" placeholder="Salary" />
+      <input id="empHireDate" type="date" />
+      <div class="modal-actions">
+        <button id="saveEmployee" class="save-btn">Save</button>
+        <button id="closeModal" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
