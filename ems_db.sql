@@ -1,0 +1,2 @@
+CREATE  DATABASE employee_db;
+SHOW DATABASES;
